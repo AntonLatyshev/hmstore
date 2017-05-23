@@ -1,0 +1,44 @@
+
+%icon-header-top_arrow {
+  background-image: url(../images/sprite.png);
+  background-position: -26px -29px;
+  width: 9px;
+  height: 5px;
+}
+%icon-header-top_basked {
+  background-image: url(../images/sprite.png);
+  background-position: -29px 0px;
+  width: 25px;
+  height: 23px;
+}
+%icon-header-top_search {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -29px;
+  width: 21px;
+  height: 22px;
+}
+%icon-header-top_user {
+  background-image: url(../images/sprite.png);
+  background-position: 0px 0px;
+  width: 24px;
+  height: 24px;
+}
+
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  %icon-header-top_arrow {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 54px 51px;
+  }
+  %icon-header-top_basked {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 54px 51px;
+  }
+  %icon-header-top_search {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 54px 51px;
+  }
+  %icon-header-top_user {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 54px 51px;
+  }
+}
