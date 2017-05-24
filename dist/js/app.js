@@ -52,6 +52,22 @@
 
 	var _header2 = _interopRequireDefault(_header);
 
+	var _carousel = __webpack_require__(4);
+
+	var _carousel2 = _interopRequireDefault(_carousel);
+
+	var _pluso = __webpack_require__(5);
+
+	var _pluso2 = _interopRequireDefault(_pluso);
+
+	var _tabs = __webpack_require__(6);
+
+	var _tabs2 = _interopRequireDefault(_tabs);
+
+	var _catalog = __webpack_require__(7);
+
+	var _catalog2 = _interopRequireDefault(_catalog);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	(0, _markupMenu.markupMenu)(window.document);
@@ -59,6 +75,10 @@
 
 	$(function () {
 	  (0, _header2.default)();
+	  (0, _carousel2.default)();
+	  (0, _pluso2.default)();
+	  (0, _tabs2.default)();
+	  (0, _catalog2.default)();
 	});
 
 /***/ }),
@@ -149,13 +169,11 @@
 	  $('.header__link.parent').on('click', function (e) {
 	    e.preventDefault();
 
-	    var $this = $(this);
-	    var item = $this.closest('.header__item');
-	    var list = $this.closest('.header__menu');
-	    var links = list.find('.header__link.parent');
-	    var items = list.find('.header__item');
-	    var content = item.find('.dropdown');
-	    var otherContent = list.find('.dropdown');
+	    var $this = $(this),
+	        item = $this.closest('.header__item'),
+	        list = $this.closest('.header__menu'),
+	        links = list.find('.header__link.parent'),
+	        items = list.find('.header__item');
 
 	    if (!item.hasClass('active')) {
 	      $('.header__menu').find('.header__item').removeClass('active');
@@ -167,6 +185,111 @@
 	  });
 	};
 	exports.default = header;
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var carousel = function carousel() {
+
+	  $('.slider').slick({
+	    slidesToShow: 4
+	  });
+
+	  $('.big-slider').slick({
+	    arrows: false,
+	    fade: true,
+	    asNavFor: '.mini-slider'
+	  });
+	  $('.mini-slider').slick({
+	    vertical: true,
+	    verticalSwiping: true,
+	    slidesToShow: 7,
+	    asNavFor: '.big-slider',
+	    focusOnSelect: true
+	  });
+	};
+	exports.default = carousel;
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+	"use strict";
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var pluso = function pluso() {
+
+	  // (function() {
+	  //   if (window.pluso)if (typeof window.pluso.start == "function") return;
+	  //   if (window.ifpluso==undefined) { window.ifpluso = 1;
+	  //     var d = document, s = d.createElement('script'), g = 'getElementsByTagName';
+	  //     s.type = 'text/javascript'; s.charset='UTF-8'; s.async = true;
+	  //     s.src = ('https:' == window.location.protocol ? 'https' : 'http')  + '://share.pluso.ru/pluso-like.js';
+	  //     var h=d[g]('body')[0];
+	  //     h.appendChild(s);
+	  //   }})();
+
+	};
+	exports.default = pluso;
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var tabs = function tabs() {
+
+	  $('.tabs-controls__link').on('click', function (e) {
+	    e.preventDefault();
+
+	    var $this = $(this),
+	        item = $this.closest('.tabs-controls__item'),
+	        contentItem = $('.tabs-list__item'),
+	        itemPosition = item.data('class');
+
+	    contentItem.filter('.tabs-list__item_' + itemPosition).add(item).addClass('active').siblings().removeClass('active');
+	  });
+	};
+	exports.default = tabs;
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var catalog = function catalog() {
+
+	  $('.catalog__link').on('click', function (e) {
+	    e.preventDefault();
+
+	    var $this = $(this),
+	        item = $this.closest('.catalog__item'),
+	        list = $this.closest('.catalog__list'),
+	        items = list.find('.catalog__item'),
+	        content = item.children('.catalog__insert'),
+	        otherContent = list.find('catalog__insert');
+
+	    item.toggleClass('active');
+	    content.toggleClass('active');
+	  });
+	};
+	exports.default = catalog;
 
 /***/ })
 /******/ ]);

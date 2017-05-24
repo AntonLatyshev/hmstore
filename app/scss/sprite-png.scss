@@ -1,7 +1,19 @@
 
+%icon-breadcrumbs_arrow {
+  background-image: url(../images/sprite.png);
+  background-position: -26px -42px;
+  width: 15px;
+  height: 5px;
+}
+%icon-buy-btn_arrow {
+  background-image: url(../images/sprite.png);
+  background-position: -59px -30px;
+  width: 9px;
+  height: 5px;
+}
 %icon-header-top_arrow {
   background-image: url(../images/sprite.png);
-  background-position: -26px -29px;
+  background-position: -59px -40px;
   width: 9px;
   height: 5px;
 }
@@ -23,22 +35,50 @@
   width: 24px;
   height: 24px;
 }
+%icon-mini-slider_arrow {
+  background-image: url(../images/sprite.png);
+  background-position: -26px -29px;
+  width: 15px;
+  height: 8px;
+}
+%icon-slider_arrow {
+  background-image: url(../images/sprite.png);
+  background-position: -59px 0px;
+  width: 13px;
+  height: 25px;
+}
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  %icon-breadcrumbs_arrow {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 72px 51px;
+  }
+  %icon-buy-btn_arrow {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 72px 51px;
+  }
   %icon-header-top_arrow {
     background-image: url(../images/sprite@2x.png);
-    background-size: 54px 51px;
+    background-size: 72px 51px;
   }
   %icon-header-top_basked {
     background-image: url(../images/sprite@2x.png);
-    background-size: 54px 51px;
+    background-size: 72px 51px;
   }
   %icon-header-top_search {
     background-image: url(../images/sprite@2x.png);
-    background-size: 54px 51px;
+    background-size: 72px 51px;
   }
   %icon-header-top_user {
     background-image: url(../images/sprite@2x.png);
-    background-size: 54px 51px;
+    background-size: 72px 51px;
+  }
+  %icon-mini-slider_arrow {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 72px 51px;
+  }
+  %icon-slider_arrow {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 72px 51px;
   }
 }

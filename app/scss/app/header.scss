@@ -29,6 +29,9 @@
       .dropdown {
         display: block;
       }
+      a::after {
+        transform: rotate(180deg);
+      }
     }
     &.search {
       cursor: pointer;
@@ -106,6 +109,12 @@
       padding: 0 20px;
     }
   }
+  &__middle {
+    background-color: #fff;
+    .header__holder {
+      padding: 20px 0;
+    }
+  }
   &__logo {
     width: 260px;
     height: 74px;
@@ -117,5 +126,97 @@
       background-size: cover;
     }
   }
-
+  &__info {
+    float: right;
+    @extend %clearfix;
+    .schedule {
+      float: left;
+      margin: 0 55px 0 0;
+      &__title {
+        font-size: 15px;
+        color: $text;
+        font-weight: 300;
+        margin: 0 0 15px;
+      }
+      span {
+        display: block;
+        color: #2c2c2c;
+        font-size: 15px;
+        line-height: 20px;
+      }
+    }
+    .feedback {
+      float: right;
+      &__btn {
+        display: block;
+        cursor: pointer;
+        @extend .schedule__title;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+      &__link {
+        text-decoration: none;
+        display: block;
+        color: #2c2c2c;
+        font-size: 15px;
+        line-height: 20px;
+        transition: .3s;
+        &:hover {
+          color: $red;
+        }
+      }
+    }
+  }
+  &__bottom {
+    background-color: #f9fafc;
+    .header__holder {
+      padding: 0;
+    }
+    .nav {
+      @extend %clearfix;
+      @extend %clear-list;
+      &__item {
+        float: left;
+        width: 142.5px;
+        &.active {
+          .nav__link {
+            &::before {
+              display: block;
+            }
+            svg {
+              fill: $red;
+            }
+          }
+        }
+      }
+      &__link {
+        display: block;
+        text-decoration: none;
+        color: $text;
+        padding: 70px 0 15px;
+        position: relative;
+        text-align: center;
+        svg {
+          fill: $text;
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          top: 15px;
+          left: 50%;
+          margin: 0 0 0 -20px;
+        }
+        &::before {
+          display: none;
+          @extend %pseudo;
+          width: 100%;
+          left: 0;
+          right: 0;
+          top: 0;
+          height: 3px;
+          background-color: $red;;
+        }
+      }
+    }
+  }
 }

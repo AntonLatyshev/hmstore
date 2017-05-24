@@ -1,0 +1,36 @@
+.info-block {
+  @extend %clearfix;
+  @extend %clear-list;
+  font-family: "Open Sans", sans-serif;
+  margin: -20px 0 80px -40px;
+  &__item {
+    float: left;
+    max-width: 390px;
+    box-sizing: border-box;
+    width: 100%;
+    @extend %clearfix;
+    padding: 0 10px;
+    margin: 20px 0 0 40px;
+  }
+  &__img {
+    float: left;
+    margin: 0 10px 0 0;
+    text-align: center;
+    img {
+      display: block;
+    }
+  }
+  &__text {
+    overflow: hidden;
+    padding: 5px 0 0;
+    font-size: 14px;
+    line-height: 18px;
+    a {
+      color: #0271c7;
+      text-decoration: none;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}

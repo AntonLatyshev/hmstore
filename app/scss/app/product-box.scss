@@ -1,0 +1,125 @@
+.product-box {
+  @extend %clearfix;
+  font-family: "Open Sans", sans-serif;
+  max-width: 1140px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px 0 0;
+  &__content {
+    float: left;
+    max-width: 840px;
+    width: 100%;
+  }
+  &__name {
+    font-size: 30px;
+    line-height: 34px;
+    color: $text;
+    font-weight: 400;
+    margin: 0 0 20px;
+  }
+  &__article {
+    display: block;
+    font-size: 14px;
+    color: #999;
+    margin: 0 0 30px;
+  }
+  &__btn-block {
+    @extend %clearfix;
+    margin: 0 0 25px;
+  }
+  &__price {
+    float: left;
+    @extend %clearfix;
+    .price__box {
+      .number {
+        font-size: 40px;
+        line-height: 40px;
+        font-weight: 300;
+      }
+      .currency {
+        font-size: 18px;
+      }
+      &.old {
+        margin: 12px 0 0;
+        .number {
+          font-size: 18px;
+          line-height: 18px;
+        }
+        .currency {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+  &__btn-holder {
+    float: right;
+    @extend %clearfix;
+    .btn-buy {
+      @extend %clearfix;
+      float: left;
+      cursor: pointer;
+      margin: 0 10px 0 0;
+      &__text {
+        display: block;
+        float: left;
+        background-color: $red;
+        color: #fff;
+        width: 100px;
+        text-align: center;
+        border-right: 1px solid #d1192c;
+        height: 48px;
+        line-height: 45px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
+        transition: .3s;
+        &:hover {
+          background-color: #d1192c;
+        }
+      }
+      &__arrow {
+        display: block;
+        float: left;
+        background-color: $red;
+        width: 36px;
+        height: 48px;
+        box-sizing: border-box;
+        position: relative;
+        border-left: 1px solid #f15767;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        transition: .3s;
+        &::before {
+          @extend %pseudo;
+          top: 50%;
+          left: 50%;
+          margin: -2px 0 0 -5px;
+          @extend %icon-buy-btn_arrow;
+        }
+        &:hover {
+          background-color: #d1192c;
+        }
+      }
+    }
+    .btn-fast-order {
+      cursor: pointer;
+      float: right;
+      height: 48px;
+      line-height: 48px;
+      padding: 0 25px;
+      box-sizing: border-box;
+      border: 1px solid #000;
+      border-radius: 10px;
+      color: #000;
+      transition: .3s;
+      &:hover {
+        background-color: #000;
+        color: #fff;
+      }
+    }
+  }
+  &__sidebar {
+    float: right;
+    max-width: 220px;
+    width: 100%;
+  }
+}

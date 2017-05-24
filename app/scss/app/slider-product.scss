@@ -1,0 +1,128 @@
+.slider-holder {
+  max-width: 1140px;
+  margin: 0 auto 100px;
+  background-color: #fff;
+  font-family: "Open Sans", sans-serif;
+  &__title {
+    font-size: 35px;
+    line-height: 35px;
+    color: #0f0f0f;
+    font-weight: 300;
+    margin: 0 0 40px;
+  }
+  .slider {
+    border-right: 1px solid #ccc;
+    &__item {
+      width: 285px;
+      border: solid #ccc;
+      border-width: 1px 0 1px 1px;
+      box-sizing: border-box;
+      padding: 0 0 30px;
+      outline: none;
+    }
+    .slick-prev,
+    .slick-next {
+      cursor: pointer;
+      position: absolute;
+      text-align: center;
+      z-index: 2;
+      font-size: 0;
+      line-height: 0;
+      top: -66px;
+      padding: 0;
+      width: 70px;
+      height: 26px;
+      background: #fff;
+      border: none;
+      outline: none;
+      &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        margin: 0 0 0 -5px;
+        display: block;
+        @extend %icon-slider_arrow;
+      }
+    }
+    .slick-prev {
+      right: 70px;
+      &::before {
+        transform: rotate(180deg);
+        margin: 0 0 0 -7px;
+      }
+    }
+    .slick-next {
+      right: 0;
+      border-left: 1px solid #ccc;
+    }
+  }
+}
+.price {
+  @extend %clearfix;
+  padding: 0 0 0 25px;
+  &__box {
+    float: left;
+    font-size: 28px;
+    line-height: 28px;
+    color: #0f0f0f;
+    text-transform: uppercase;
+    .number {
+      display: inline-block;
+    }
+    .currency {
+      display: inline-block;
+      font-size: 16px;
+      vertical-align: top;
+    }
+    &.sale {
+      color: $red;
+      margin: 0 10px 0 0;
+    }
+    &.old {
+      font-size: 20px;
+      .number {
+        text-decoration: line-through;
+      }
+      .currency {
+        font-size: 12px;
+      }
+    }
+  }
+}
+.product {
+  display: block;
+  text-decoration: none;
+  outline: none;
+  &:hover {
+    text-decoration: underline;
+  }
+  &__img {
+    text-align: center;
+    height: 280px;
+    overflow: hidden;
+    outline: none;
+    img {
+      display: inline-block;
+      outline: none;
+    }
+  }
+  &__title {
+    height: 100px;
+    overflow: hidden;
+    margin: 0 0 10px;
+    color: $text;
+    padding: 0 25px;
+    line-height: 20px;
+  }
+  &__article {
+    display: block;
+    font-size: 12px;
+    line-height: 14px;
+    color: #999;
+    padding: 0 25px;
+    height: 24px;
+    overflow: hidden;
+    margin: 0 0 10px;
+  }
+}
