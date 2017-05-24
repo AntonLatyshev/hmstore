@@ -7,6 +7,7 @@ import carousel from "./carousel"
 import pluso from "./pluso"
 import tabs from "./tabs"
 import catalog from "./catalog"
+import popup from "./popup"
 
 $(() => {
   header();
@@ -14,4 +15,5 @@ $(() => {
   pluso();
   tabs();
   catalog();
+  popup();
 });

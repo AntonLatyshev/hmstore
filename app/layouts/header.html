@@ -21,7 +21,13 @@
         <li class="header__item"><a href="#" class="header__link">Контакты</a></li>
       </ul>
       <div class="header__menu user-box">
-        <div class="header__item search"><span></span></div>
+        <div class="header__item search">
+          <form class="search-form" action="#" method="post">
+            <input type="text" name="text" value="Поиск">
+            <button type="submit" class="search-btn" name="button"></button>
+          </form>
+          <span></span>
+        </div>
         <div class="header__item user">
           <a href="" class="header__link parent">
             <span></span>
@@ -62,7 +68,7 @@
       <ul class="nav">
         <li class="nav__item">
           <a href="#" class="nav__link">Мебель
-            <svg class="furniture"><use xlink:href="images/sprite.svg#furniture"/></svg>
+            <svg style="display: block;"class="furniture"><use xlink:href="images/sprite.svg#furniture"/></svg>
           </a>
         </li>
         <li class="nav__item active">

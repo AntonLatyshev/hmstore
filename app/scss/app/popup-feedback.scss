@@ -1,0 +1,95 @@
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 3;
+  font-family: "Open Sans", sans-serif;
+  &.active {
+    display: block
+  }
+  &__holder {
+    border-radius: 10px;
+    max-width: 500px;
+    width: 100%;
+    background-color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+  }
+  &__close {
+    cursor: pointer;
+    display: block;
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    @extend %icon-close_popup;
+  }
+  &__title {
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    color: $text;
+    text-transform: uppercase;
+    margin: 0 0 10px;
+  }
+  &__subtitle {
+    @extend .popup__title;
+    font-size: 16px;
+    text-transform: inherit;
+    font-weight: 400;
+    line-height: 20px;
+    margin: 0 0 10px;
+  }
+  &__form-block {
+    padding: 20px 0;
+  }
+  &__form {
+  }
+  &__row {
+    margin: 0 0 20px;
+    label {
+      font-size: 14px;
+      color: $text;
+      display: block;
+      padding: 0 20px 10px;
+      cursor: pointer;
+    }
+    input {
+      outline: none;
+      width: 100%;
+      height: 30px;
+      border-radius: 10px;
+      border: 2px solid $text;
+      padding: 0 20px;
+      &:focus {
+        border-color: green; 
+      }
+    }
+  }
+  &__btn-holder {
+    text-align: center;
+  }
+  &__btn-submit {
+    cursor: pointer;
+    outline: none;
+    width: 200px;
+    height: 30px;
+    color: $text;
+    text-transform: uppercase;
+    font-weight: 600;
+    border-radius: 10px;
+    background: none;
+    border: 2px solid #000;
+    transition: .3s;
+    &:hover {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}

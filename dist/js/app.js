@@ -68,6 +68,10 @@
 
 	var _catalog2 = _interopRequireDefault(_catalog);
 
+	var _popup = __webpack_require__(8);
+
+	var _popup2 = _interopRequireDefault(_popup);
+
 	function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
 	(0, _markupMenu.markupMenu)(window.document);
@@ -79,6 +83,7 @@
 	  (0, _pluso2.default)();
 	  (0, _tabs2.default)();
 	  (0, _catalog2.default)();
+	  (0, _popup2.default)();
 	});
 
 /***/ }),
@@ -168,6 +173,7 @@
 
 	  $('.header__link.parent').on('click', function (e) {
 	    e.preventDefault();
+	    e.stopPropagation();
 
 	    var $this = $(this),
 	        item = $this.closest('.header__item'),
@@ -182,6 +188,20 @@
 	    } else {
 	      item.removeClass('active');
 	    }
+	  });
+
+	  $('.header__item.search').on('click', function (e) {
+	    e.stopPropagation();
+	    $('.search-form').addClass('active');
+	    setTimeout("$('.search-form').find('input').eq(0).focus();", 100);
+	    $('.header__item').removeClass('active');
+	  });
+	  $('body').on('click', function () {
+	    $('.search-form').removeClass('active');
+	    $('.header__item').removeClass('active');
+	  });
+	  $('.dropdown').on('click', function (e) {
+	    e.stopPropagation();
 	  });
 	};
 	exports.default = header;
@@ -290,6 +310,34 @@
 	  });
 	};
 	exports.default = catalog;
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+	'use strict';
+
+	Object.defineProperty(exports, "__esModule", {
+	  value: true
+	});
+	var popup = function popup() {
+
+	  $('.feedback__btn').on('click', function () {
+	    $('.popup.feedback').addClass('active');
+	    setTimeout("$('.popup__holder').find('input').eq(0).focus();", 100);
+	  });
+
+	  $('.popup, .popup__close').on('click', function () {
+	    $('.popup').removeClass('active');
+	  });
+
+	  $('.popup__holder').on('click', function (e) {
+	    e.stopPropagation();
+	  });
+
+	  $('input[type="tel"]').mask('+38 (099) 999-99-99');
+	};
+	exports.default = popup;
 
 /***/ })
 /******/ ]);
