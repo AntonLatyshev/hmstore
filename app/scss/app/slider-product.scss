@@ -9,6 +9,14 @@
     color: #0f0f0f;
     font-weight: 300;
     margin: 0 0 40px;
+    padding: 0 140px 0 0;
+    @include response(749) {
+      font-size: 20px;
+      line-height: 20px;
+    }
+    @include response(567) {
+      padding: 0;
+    }
   }
   .slider {
     border-right: 1px solid #ccc;
@@ -35,6 +43,13 @@
       background: #fff;
       border: none;
       outline: none;
+      @include response(567) {
+        top: auto;
+        bottom: -66px;
+        width: 145px;
+        height: 66px;
+        background-color: $h_top;
+      }
       &::before {
         content: "";
         position: absolute;
@@ -43,18 +58,32 @@
         margin: 0 0 0 -5px;
         display: block;
         @extend %icon-slider_arrow;
+        @include response(567) {
+          top: 50%;
+          margin: -12px 0 0 -5px;
+        }
       }
     }
     .slick-prev {
       right: 70px;
+      @include response(567) {
+        right: 50%;
+      }
       &::before {
         transform: rotate(180deg);
         margin: 0 0 0 -7px;
+        @include response(567) {
+          margin: -12px 0 0 -7px;
+        }
       }
     }
     .slick-next {
       right: 0;
       border-left: 1px solid #ccc;
+      @include response(567) {
+        border: none;
+        left: 50%;
+      }
     }
   }
 }

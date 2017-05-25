@@ -6,6 +6,9 @@
   margin: 0 auto;
   max-width: 1140px;
   width: 100%;
+  @include response(750) {
+    display: none;
+  }
   &__list {
     @extend %clearfix;
     @extend %clear-list;

@@ -9,6 +9,24 @@
     float: left;
     max-width: 840px;
     width: 100%;
+    @include response(1089) {
+      max-width:  800px;
+    }
+    @include response(1049) {
+      max-width:  750px;
+    }
+    @include response(999) {
+      max-width:  700px;
+    }
+    @include response(970) {
+      max-width:  680px;
+    }
+    @include response(949) {
+      max-width:  656px;
+    }
+    @include response(929) {
+      max-width: 100%;
+    }
   }
   &__name {
     font-size: 30px;
@@ -16,6 +34,10 @@
     color: $text;
     font-weight: 400;
     margin: 0 0 20px;
+    @include response(509) {
+      font-size: 20px;
+      line-height: 24px;
+    }
   }
   &__article {
     display: block;
@@ -26,11 +48,28 @@
   &__btn-block {
     @extend %clearfix;
     margin: 0 0 25px;
+    @include response(669) {
+      text-align: center;
+    }
   }
   &__price {
     float: left;
     @extend %clearfix;
+    @include response(669) {
+      float: none;
+      display: inline-block;
+      margin: 0 0 10px;
+    }
+    @include response(509) {
+      max-width: 200px;
+      width: 100%;
+      text-align: center;
+    }
     .price__box {
+      @include response(509) {
+        display: inline-block;
+        float: none;
+      }
       .number {
         font-size: 40px;
         line-height: 40px;
@@ -54,6 +93,10 @@
   &__btn-holder {
     float: right;
     @extend %clearfix;
+    @include response(669) {
+      float: none;
+      display: inline-block;
+    }
     .btn-buy {
       @extend %clearfix;
       float: left;
@@ -111,6 +154,9 @@
       border-radius: 10px;
       color: #000;
       transition: .3s;
+      @include response(389) {
+        padding: 0 13px;
+      }
       &:hover {
         background-color: #000;
         color: #fff;
@@ -121,5 +167,12 @@
     float: right;
     max-width: 220px;
     width: 100%;
+    @include response(929) {
+      display: none;
+      position: absolute;
+      background-color: #f5f5f5;
+      right: 0;
+      padding: 10px 10px;
+    }
   }
 }

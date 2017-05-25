@@ -14,7 +14,14 @@ body {
 .wrapper {
   position: relative;
 }
-
+.container {
+  @include response(1140) {
+    padding: 0 15px;
+  }
+  @include response(749) {
+    text-align: center;
+  }
+}
 .share-block {
   margin: 0 0 40px;
 }

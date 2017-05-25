@@ -1,0 +1,49 @@
+.hamburger {
+  display: none;
+  cursor: pointer;
+  float: left;
+  width: 30px;
+  height: 26px;
+  line-height: 26px;
+  @include response(750) {
+    display: block;
+  }
+  &__holder {
+    display: inline-block;
+    vertical-align: middle;
+  }
+  &__line {
+    width: 30px;
+    height: 2px;
+    background-color: $text;
+    display: block;
+    transition: all 0.3s ease-in-out;
+  }
+  .hamburger__line:nth-child(3){
+    width: 15px;
+  }
+  &__line + &__line {
+    margin: 2px 0 0;
+  }
+  &.active {
+    z-index: 5;
+    float: none;
+    position: relative;
+    background-color: #fff;
+    margin: 0 0 10px;
+    .hamburger__line {
+      background-color: $red;
+    }
+    .hamburger__line:nth-child(2){
+      opacity: 0;
+    }
+    .hamburger__line:nth-child(1){
+      transform: translateY(2px) rotate(45deg);
+    }
+    .hamburger__line:nth-child(3){
+      width: 30px !important;
+      transform: translateY(-6px) rotate(-45deg);
+      width: 30px;
+    }
+  }
+}

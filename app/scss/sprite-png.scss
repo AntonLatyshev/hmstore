@@ -1,31 +1,31 @@
 
 %icon-breadcrumbs_arrow {
   background-image: url(../images/sprite.png);
-  background-position: -39px -56px;
+  background-position: -62px -57px;
   width: 15px;
   height: 5px;
 }
 %icon-btn_search {
   background-image: url(../images/sprite.png);
-  background-position: -26px -29px;
+  background-position: 0px -57px;
   width: 18px;
   height: 19px;
 }
 %icon-buy-btn_arrow {
   background-image: url(../images/sprite.png);
-  background-position: -59px -30px;
+  background-position: -88px -40px;
   width: 9px;
   height: 5px;
 }
 %icon-close_popup {
   background-image: url(../images/sprite.png);
-  background-position: 0px -56px;
+  background-position: -23px -57px;
   width: 14px;
   height: 14px;
 }
 %icon-header-top_arrow {
   background-image: url(../images/sprite.png);
-  background-position: -59px -40px;
+  background-position: -88px -30px;
   width: 9px;
   height: 5px;
 }
@@ -37,7 +37,7 @@
 }
 %icon-header-top_search {
   background-image: url(../images/sprite.png);
-  background-position: 0px -29px;
+  background-position: -59px -26px;
   width: 21px;
   height: 22px;
 }
@@ -49,56 +49,86 @@
 }
 %icon-mini-slider_arrow {
   background-image: url(../images/sprite.png);
-  background-position: -19px -56px;
+  background-position: -42px -57px;
   width: 15px;
   height: 8px;
 }
 %icon-slider_arrow {
   background-image: url(../images/sprite.png);
-  background-position: -59px 0px;
+  background-position: -88px 0px;
   width: 13px;
   height: 25px;
+}
+%icon-tab_brand {
+  background-image: url(../images/sprite.png);
+  background-position: 0px -29px;
+  width: 23px;
+  height: 23px;
+}
+%icon-tab_designer {
+  background-image: url(../images/sprite.png);
+  background-position: -59px 0px;
+  width: 24px;
+  height: 21px;
+}
+%icon-tab_guarantee {
+  background-image: url(../images/sprite.png);
+  background-position: -28px -29px;
+  width: 22px;
+  height: 23px;
 }
 
 @media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
   %icon-breadcrumbs_arrow {
     background-image: url(../images/sprite@2x.png);
-    background-size: 72px 70px;
+    background-size: 101px 76px;
   }
   %icon-btn_search {
     background-image: url(../images/sprite@2x.png);
-    background-size: 72px 70px;
+    background-size: 101px 76px;
   }
   %icon-buy-btn_arrow {
     background-image: url(../images/sprite@2x.png);
-    background-size: 72px 70px;
+    background-size: 101px 76px;
   }
   %icon-close_popup {
     background-image: url(../images/sprite@2x.png);
-    background-size: 72px 70px;
+    background-size: 101px 76px;
   }
   %icon-header-top_arrow {
     background-image: url(../images/sprite@2x.png);
-    background-size: 72px 70px;
+    background-size: 101px 76px;
   }
   %icon-header-top_basked {
     background-image: url(../images/sprite@2x.png);
-    background-size: 72px 70px;
+    background-size: 101px 76px;
   }
   %icon-header-top_search {
     background-image: url(../images/sprite@2x.png);
-    background-size: 72px 70px;
+    background-size: 101px 76px;
   }
   %icon-header-top_user {
     background-image: url(../images/sprite@2x.png);
-    background-size: 72px 70px;
+    background-size: 101px 76px;
   }
   %icon-mini-slider_arrow {
     background-image: url(../images/sprite@2x.png);
-    background-size: 72px 70px;
+    background-size: 101px 76px;
   }
   %icon-slider_arrow {
     background-image: url(../images/sprite@2x.png);
-    background-size: 72px 70px;
+    background-size: 101px 76px;
+  }
+  %icon-tab_brand {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 101px 76px;
+  }
+  %icon-tab_designer {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 101px 76px;
+  }
+  %icon-tab_guarantee {
+    background-image: url(../images/sprite@2x.png);
+    background-size: 101px 76px;
   }
 }

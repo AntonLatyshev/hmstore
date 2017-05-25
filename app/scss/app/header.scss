@@ -9,11 +9,17 @@
     margin: 0 auto;
     padding: 8px 0;
     @extend %clearfix;
+    @include response(1140) {
+      padding: 8px 15px;
+    }
   }
   &__menu {
     @extend %clear-list;
     @extend %clearfix;
     float: left;
+    // @include response (750) {
+    //   display: none;
+    // }
   }
   &__item {
     float: left;
@@ -44,6 +50,16 @@
         display: none;
         position: absolute;
         right: 0;
+        z-index: 2;
+        @include response(469) {
+          right: -50px;
+        }
+        @include response(419) {
+          right: -100px;
+        }
+        @include response(365) {
+          right: -150px;
+        }
         &.active {
           display: block;
         }
@@ -104,6 +120,9 @@
     color: $text;
     padding: 6px 20px;
     font-size: 14px;
+    @include response (779) {
+      padding: 6px 15px;
+    }
     &.parent {
       position: relative;
       &::after {
@@ -130,7 +149,7 @@
     	border-left: 5px solid transparent;
     	border-right: 5px solid transparent;
     	border-bottom: 5px solid $h_top;
-        }
+    }
     &__link {
       display: block;
       text-decoration: none;
@@ -141,6 +160,7 @@
   }
   &__menu.user-box {
     float: right;
+    display: block;
     @extend %clearfix;
     .header__link {
       padding: 0 20px;
@@ -150,12 +170,24 @@
     background-color: #fff;
     .header__holder {
       padding: 20px 0;
+      @include response(1140) {
+        padding: 20px 15px;
+      }
+      @include response(509) {
+        text-align: center;
+        padding: 0;
+      }
     }
   }
   &__logo {
     width: 260px;
     height: 74px;
     float: left;
+    @include response(509) {
+      width: 31px;
+      height: 30px;
+      margin: 0 10px 0 0;
+    }
     a {
       display: block;
       height: 100%;
@@ -166,9 +198,17 @@
   &__info {
     float: right;
     @extend %clearfix;
+    @include response(509) {
+      float: none;
+      display: inline-block;
+      display: none;
+    }
     .schedule {
       float: left;
       margin: 0 55px 0 0;
+      @include response(750) {
+        display: none;
+      }
       &__title {
         font-size: 15px;
         color: $text;
@@ -209,13 +249,24 @@
     background-color: #f9fafc;
     .header__holder {
       padding: 0;
+      text-align: center;
     }
     .nav {
       @extend %clearfix;
       @extend %clear-list;
+      display: inline-block;
+      // @include response(750) {
+      //   display: none;
+      // }
       &__item {
         float: left;
-        width: 142.5px;
+        width: 142px;
+        @include response(1136) {
+          width: 121px;
+        }
+        @include response(967) {
+          width: 93px;
+        }
         &:hover,
         &.active {
           .nav__link {

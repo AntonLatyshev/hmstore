@@ -1,17 +1,44 @@
 .tabs-block {
   margin: 0 0 46px;
   font-family: "Open Sans", sans-serif;
+  @include response(869) {
+    text-align: center;
+  }
   .tabs-controls {
     @extend %clearfix;
     @extend %clear-list;
     border-bottom: 1px solid #ccc;
+    @include response(869) {
+      display: inline-block;
+    }
     &__item {
       float: left;
       width: 210px;
       text-align: center;
+      @include response(869) {
+        width: 180px;
+      }
+      @include response(749) {
+        width: 150px;
+      }
+      @include response(629) {
+        width: 120px;
+      }
+      @include response(509) {
+        width: 56px;
+        &.active {
+          width: 120px;
+        }
+      }
       &.active {
         .tabs-controls__link {
           color: $red;
+          @include response(509) {
+            text-indent: 0;
+            &::before {
+              display: none;
+            }
+          }
           &::after {
             display: block;
           }
@@ -25,6 +52,42 @@
       color: $text;
       position: relative;
       transition: .3s;
+      @include response(509) {
+        text-indent: -9999px;
+      }
+      &::before {
+        display: none;
+        @extend %pseudo;
+        top: 50%;
+        left: 50%;
+        @include response(509) {
+          display: block;
+        }
+      }
+      &.description {
+        &::before {
+          @extend %icon-tab_brand;
+          margin: -11px 0 0 -11px;
+        }
+      }
+      &.guarantee {
+        &::before {
+          @extend %icon-tab_guarantee;
+          margin: -11px 0 0 -11px;
+        }
+      }
+      &.designer {
+        &::before {
+          @extend %icon-tab_designer;
+          margin: -10px 0 0 -12px;
+        }
+      }
+      &.brand {
+        &::before {
+          @extend %icon-tab_brand;
+          margin: -11px 0 0 -11px;
+        }
+      }
       &::after {
         display: none;
         @extend %pseudo;
@@ -42,6 +105,7 @@
   }
   .tabs-list {
     @extend %clear-list;
+    text-align: left;
     &__item {
       display: none;
       padding: 0 10px;
